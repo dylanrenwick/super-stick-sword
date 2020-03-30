@@ -1,0 +1,9 @@
+run/
+bin/
+build/
+tags
+**/*.swp
+.gradle/
+.classpath
+.project
+.settings/

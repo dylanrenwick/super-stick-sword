@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+
+	"pattern":
+	[
+		"###",
+		"###",
+		"###"
+	],
+
+	"key":
+	{
+		"#": { "item": "super_stick_sword:compressed_stick" }
+	},
+
+	"result": { "item": "super_stick_sword:double_compressed_stick" }
+}
