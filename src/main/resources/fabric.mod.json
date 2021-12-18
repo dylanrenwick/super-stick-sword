@@ -3,27 +3,27 @@
   "id": "modid",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Super Stick Sword",
+  "description": "The original Super Stick Sword mod, now on fabric!",
   "authors": [
-    "Me!"
+    "Dylan Renwick"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://skidsdev.xyz",
+    "sources": "https://github.com/dylanrenwick/super-stick-sword"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/supersticksword/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "xyz.skidsdev.supersticksword.SuperStickSword"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "supersticksword.mixins.json"
   ],
 
   "depends": {
@@ -31,8 +31,5 @@
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
