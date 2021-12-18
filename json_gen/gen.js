@@ -66,9 +66,19 @@ function recipePath() { return `${resources}/data/${modid}/recipes/`; };
 function writeModelToFile(depth) {
     let model = genModel(depth);
     let file = `${modelPath()}${getItemName(depth)}.json`;
-    console.log(model);
-    console.log(`Writing to ${file}...`);
-    fs.writeFileSync(file, model);
+    write(file, model);
+}
+
+function writeRecipeToFile(depth) {
+    let recipe = genRecipe(depth);
+    let file = `${recipePath()}${getItemName(depth)}.json`;
+    write(file, recipe);
+}
+
+function write(path, data) {
+    console.log(data);
+    console.log(`Writing to ${path}...`);
+    fs.writeFileSync(path, data);
     console.log(`Write complete!`);
 }
   
@@ -76,7 +86,7 @@ function main() {
     for (let depth = 0; depth < depths.length; depth++) {
         writeModelToFile(depth);
         console.log("\n");
-        console.log(genRecipe(depth));
+        writeRecipeToFile(depth);
         console.log("===================\n");
     }
 }
