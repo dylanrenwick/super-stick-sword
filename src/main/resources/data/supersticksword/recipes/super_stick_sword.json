@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "O",
+    "O",
+    "S"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "O": {
+      "item": "supersticksword:octuple_compressed_stick"
+    }
+  },
+  "result": {
+    "item": "supersticksword:super_stick_sword",
+    "count": 1
+  }
+}

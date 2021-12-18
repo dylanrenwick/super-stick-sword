@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SSS",
+        "SSS",
+        "SSS"
+    ],
+    "key": {
+        "S": {
+            "item": "supersticksword:triple_compressed_stick"
+        }
+    },
+    "result": {
+        "item": "supersticksword:quadruple_compressed_stick",
+        "count": 1
+    }
+}
