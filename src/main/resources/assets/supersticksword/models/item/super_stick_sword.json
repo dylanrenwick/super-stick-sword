@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "supersticksword:item/single_compressed_stick"
+    "layer0": "supersticksword:item/super_stick_sword"
   }
 }
