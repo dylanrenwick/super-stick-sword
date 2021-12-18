@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SSS",
+        "SSS",
+        "SSS"
+    ],
+    "key": {
+        "S": {
+            "tag": "supersticksword:quintuple_compressed_stick"
+        }
+    },
+    "result": {
+        "item": "supersticksword:hextuple_compressed_stick",
+        "count": 1
+    }
+}
