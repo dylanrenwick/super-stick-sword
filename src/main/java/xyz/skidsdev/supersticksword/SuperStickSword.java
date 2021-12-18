@@ -35,7 +35,7 @@ public class SuperStickSword implements ModInitializer {
 		}
 
 		Item stickSword = new SwordItem(
-				StickToolMaterial.INSTANCE, 90, 1,
+				StickToolMaterial.INSTANCE, 99, -3,
 				new Item.Settings().group(ItemGroup.COMBAT));
 		addItem(stickSword, "super_stick_sword");
 	}

@@ -18,7 +18,7 @@ public class StickToolMaterial implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 10;
+        return 0;
     }
 
     @Override
