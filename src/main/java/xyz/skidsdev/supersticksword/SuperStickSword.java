@@ -8,6 +8,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.lwjgl.system.CallbackI;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SuperStickSword implements ModInitializer {
 	public static final String MODID = "supersticksword";
@@ -16,10 +20,18 @@ public class SuperStickSword implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LogManager.getLogger(MODID);
 
-	public static final Item DOUBLE_COMPRESSED_STICK = new Item(new FabricItemSettings().group(ItemGroup.MISC));
+	public static final List<Item> ITEMS = new ArrayList<>();
+
+	private static final String[] sizes = new String[] {
+			"single", "double", "triple", "quadruple", "quintuple", "hextuple", "septuple", "octuple"
+	};
 
 	@Override
 	public void onInitialize() {
-		Registry.register(Registry.ITEM, new Identifier(MODID, "double_compressed_stick"), DOUBLE_COMPRESSED_STICK);
+		for (String size : sizes) {
+			Item newItem = new Item(new FabricItemSettings().group(ItemGroup.MISC));
+			Registry.register(Registry.ITEM, new Identifier(MODID, size + "_compressed_stick"), newItem);
+			ITEMS.add(newItem);
+		}
 	}
 }
