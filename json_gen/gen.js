@@ -7,7 +7,7 @@ const recipeTemplate = `{
     ],
     "key": {
         "S": {
-            "tag": "-=-input-=-"
+            "item": "-=-input-=-"
         }
     },
     "result": {
