@@ -23,10 +23,13 @@ const modelTemplate = `{
     }
 }
 `;
-const langRecordTemplate = `    "-=-type-=-.-=-modid-=-.-=-key-=-": "-=-val-=-",`;
 
 const modid = "supersticksword";
 const depths = ["single", "double", "triple", "quadruple", "quintuple", "hextuple", "septuple", "octuple"];
+
+const langRecordTemplate = `    "-=-type-=-.-=-modid-=-.-=-key-=-": "-=-val-=-",`;
+const staticLangRecords = `    "item.${modid}.super_stick_sword": "Stick Sword"
+`;
 
 function applyTemplate(template, replace) {
     let applied = template.slice();
@@ -52,7 +55,7 @@ function getEnglishName(depth) {
     if (depth > 0) {
         let depthName = depths[depth];
         depthName = depthName.substring(0, 1).toUpperCase() + depthName.substring(1);
-        name = `${depthName} ${name}`;
+        name = `${depthName}-${name}`;
     }
     return name;
 }
@@ -75,7 +78,6 @@ function genLang(langFile, depth) {
         val: getEnglishName(depth),
         modid
     });
-    if (depth == depths.length - 1) row = row.slice(0, -1);
     langFile.contents += row + "\n";
 }
 
@@ -100,7 +102,7 @@ function writeRecipeToFile(depth) {
 
 function writeLangToFile(langFile) {
     let file = `${langPath()}${langFile.name}.json`;
-    let contents = langFile.contents + "}\n";
+    let contents = langFile.contents + staticLangRecords + "}\n";
     write(file, contents);
 }
 
